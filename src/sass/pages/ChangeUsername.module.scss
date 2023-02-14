@@ -1,0 +1,49 @@
+$primary: #A4FF95;
+$hover: #1fea00;
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #bebebe;
+    font: {
+        family: Arial;
+    }
+
+    input {
+        padding: 10px;
+        width: 300px;
+        height: 20px;
+        border: none;
+        border-bottom: 3px solid $primary;
+        outline: none;
+        font-size: 16px;
+        transition: border-bottom .5s;
+
+        &:focus {
+            border-bottom: 3px solid $hover;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+        border: none;
+        background-color: $primary;
+        padding: 15px;
+        border-radius: 27px;
+        font-weight: 700;
+        transition: all .5s;
+
+        &:hover {
+            color: #fff;
+            background-color: $hover;
+        }
+    }
+
+    * {
+        margin-bottom: 30px;
+    }
+}

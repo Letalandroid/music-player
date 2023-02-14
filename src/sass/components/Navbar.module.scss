@@ -1,0 +1,67 @@
+.nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    padding: 7px;
+    border: 3px solid #A4FF95;
+    border-radius: 623px;
+    text-decoration: none;
+}
+
+.nav__a {
+    @mixin nav_selector ($bg-color, $color: #000) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $bg-color;
+        color: $color;
+        border-radius: 623px 0 0 623px;
+        font-size: 27px;
+        text-decoration: none;
+    }
+
+    &:first-child {
+        @include nav_selector(#A4FF95, #fff);
+    }
+
+    &:last-child {
+        @include nav_selector(transparent);
+    }
+}
+
+.nav__a_music {
+    @mixin nav_selector ($bg-color, $color: #000) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $bg-color;
+        color: $color;
+        border-radius: 0 623px 623px 0;
+        font-size: 27px;
+        text-decoration: none;
+    }
+
+    &:first-child {
+        @include nav_selector(transparent);
+    }
+
+    &:last-child {
+        @include nav_selector(#A4FF95, #fff);
+    }
+}
+
+.nav__img {
+    position: relative;
+    transform: scale(2.2);
+    width: 25px;
+    border-radius: 50%;
+    background-color: #A4FF95;
+    outline: 3px solid #fff;
+    padding: 5px;
+}

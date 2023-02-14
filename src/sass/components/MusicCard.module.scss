@@ -1,0 +1,66 @@
+$primary: #A4FF95;
+
+.container {
+    margin: 50px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid $primary;
+    text-align: center;
+    border-radius: 27px;
+    padding: 45px 30px 35px 30px;
+
+    font: {
+        size: 18px;
+        family: Arial, Helvetica, sans-serif;
+    }
+
+    img {
+        position: absolute;
+        top: -35px;
+        left: 70px;
+        width: 65px;
+        height: 65px;
+        border: 2px solid $primary;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+}
+
+@mixin card_text {
+    margin-bottom: 15px;
+
+    p {
+        font-size: 14px;
+    }
+
+    span {
+        font-weight: 900;
+    }
+}
+
+.music_name {
+    @include card_text;
+}
+
+.music_duration {
+    @include card_text;
+    margin-bottom: 0;
+}
+
+.music_btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -30px;
+    left: 80px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background-color: $primary;
+    font-size: 25px;
+    color: #fff;
+}
